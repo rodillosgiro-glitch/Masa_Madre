@@ -4,7 +4,6 @@
   left: 50%;
   transform: translateX(-50%) !important;
   width: 100%;
-  max-width: 1920px;
   background: linear-gradient(
     135deg, 
     rgba(140, 93, 66, 0.98) 0%, 
