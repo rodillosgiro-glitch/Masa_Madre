@@ -68,7 +68,7 @@ body::after {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 80px; /* Altura del navbar */
+  padding-top: 90px; /* Altura del navbar */
 }
 
 /* Contenedor de sección */

@@ -6,7 +6,7 @@ function Header() {
       <div className="header-overlay">
         <div className="header-content">
           <div className="year-badge">
-            <div className="year">2025</div>
+            <div className="year">2027</div>
             <div className="location">Soacha - Cundinamarca</div>
           </div>
 
