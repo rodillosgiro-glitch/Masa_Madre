@@ -1,0 +1,263 @@
+.calculadora-container {
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+}
+
+.calculadora-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.calculadora-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.calculadora-header h2 {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 1.6rem;
+  color: #8B4513;
+  margin: 0 0 0.3rem;
+}
+
+.calculadora-header p {
+  font-family: 'Arial', sans-serif;
+  color: #888;
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Campos del formulario */
+.campo {
+  margin-bottom: 1.5rem;
+}
+
+.campo label {
+  display: block;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+}
+
+.campo input,
+.campo select,
+.select-hidratacion {
+  padding: 0.8rem 1rem;
+  font-size: 1.05rem;
+  font-family: 'Arial', sans-serif;
+  border: 2px solid #e0d5c8;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: white;
+  color: #333;
+}
+
+.campo input:focus,
+.campo select:focus,
+.select-hidratacion:focus {
+  outline: none;
+  border-color: #FFA500;
+}
+
+.harina-input {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.harina-input input {
+  flex: 1;
+  min-width: 0;
+}
+
+.harina-input select {
+  flex-shrink: 0;
+}
+
+.select-hidratacion {
+  width: 100%;
+}
+
+.descripcion-hidratacion {
+  margin-top: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: #FFF4E0;
+  border-left: 4px solid #FFA500;
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  color: #6b4a2a;
+}
+
+.temperatura-input {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.temperatura-input input {
+  width: 110px;
+}
+
+.temperatura-input span {
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  color: #8B4513;
+  font-size: 1.1rem;
+}
+
+/* Info de sal */
+.sal-info {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  background: #f7f0e6;
+  border-radius: 12px;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.sal-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFA500;
+  position: relative;
+}
+
+.sal-icon::after {
+  content: '✓';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+.sal-info strong {
+  color: #8B4513;
+}
+
+.sal-info p {
+  margin: 0.2rem 0 0;
+  font-size: 0.88rem;
+  color: #888;
+}
+
+/* Tarjeta de resultados */
+.resultado-card {
+  background: #8B4513;
+  color: white;
+  align-self: start;
+  position: sticky;
+  top: 110px;
+}
+
+.resultado-card .calculadora-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.resultado-card .calculadora-header h2 {
+  color: #FFA500;
+}
+
+.badge-hidratacion {
+  background: #FFA500;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+}
+
+.resultado-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+}
+
+.resultado-row strong {
+  font-size: 1.15rem;
+  color: #FFD9A0;
+  text-align: right;
+}
+
+.resultado-row strong small {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.resultado-total {
+  border: 2px solid #FFA500;
+  background: rgba(255, 165, 0, 0.15);
+}
+
+.tiempo-fermentacion {
+  color: #FFA500 !important;
+}
+
+/* Consejo */
+.consejo {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.consejo strong {
+  color: #FFA500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calculadora-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resultado-card {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculadora-container {
+    padding: 1rem 0.5rem 3rem;
+  }
+
+  .calculadora-card {
+    padding: 1.4rem;
+  }
+
+  .harina-input {
+    flex-direction: column;
+  }
+
+  .harina-input select {
+    width: 100%;
+  }
+}

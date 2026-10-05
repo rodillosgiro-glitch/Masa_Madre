@@ -84,6 +84,28 @@
   }
 }
 
+/* Secciones por dificultad */
+.dificultad-seccion {
+  margin-top: 3rem;
+}
+
+.dificultad-titulo {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 2rem;
+  color: #8B4513;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #FFA500;
+}
+
+@media (max-width: 480px) {
+  .dificultad-titulo {
+    font-size: 1.5rem;
+  }
+}
+
 /* Grid de tarjetas */
 .recetas-grid {
   display: grid;
@@ -342,6 +364,26 @@
   background: #FF8C00;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+.share-button {
+  background: #8B4513;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.share-button:hover {
+  background: #A0522D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
 }
 
 .receta-detalle {

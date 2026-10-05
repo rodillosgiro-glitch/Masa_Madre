@@ -71,6 +71,12 @@ body::after {
   padding-top: 90px; /* Altura del navbar */
 }
 
+@media (max-width: 768px) {
+  .app {
+    padding-top: 70px; /* El navbar baja a 70px en móvil */
+  }
+}
+
 /* Contenedor de sección */
 .section-container {
   width: 100%;

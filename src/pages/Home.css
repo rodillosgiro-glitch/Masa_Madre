@@ -1407,3 +1407,15 @@
     line-height: 1;
   }
 }
+
+/* En pantallas pequeñas los párrafos se reducen para no desbordar */
+@media (max-width: 480px) {
+  .home-content p,
+  .masa-madre-description,
+  .pan-masa-madre-description,
+  .como-hacer-description,
+  .como-hacer-detalle {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+}

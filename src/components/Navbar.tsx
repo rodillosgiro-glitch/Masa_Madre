@@ -34,6 +34,14 @@ const Navbar: React.FC = () => {
               Recetas
             </Link>
           </li>
+          <li className="nav-item">
+            <Link 
+              to="/calculadora" 
+              className={`nav-link ${location.pathname === '/calculadora' ? 'active' : ''}`}
+            >
+              Calculadora
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

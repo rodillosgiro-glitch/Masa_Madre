@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import './Recetas.css';
 
 interface Receta {
   id: number;
+  slug: string;
   nombre: string;
   tiempo: string;
   dificultad: string;
@@ -17,7 +19,8 @@ interface Receta {
 const recetasData: Receta[] = [
   {
     id: 1,
-    nombre: "HOGAZA RUSTICA SEMIINTEGRAL",
+    slug: "hogaza-rustica-semiintegral",
+    nombre: "HOGAZA RÚSTICA SEMIINTEGRAL",
     tiempo: "24 horas",
     dificultad: "Intermedio",
     imagenPortada: "/image/hogaza.jpeg",
@@ -30,14 +33,14 @@ const recetasData: Receta[] = [
     ],
     pasos: [
       {
-        texto: "Unir todos los ingredientes y dejar reposar de 20 a minutos a una hora para realizar la autolisis. (Todos menos la sal)"
+        texto: "Unir todos los ingredientes y dejar reposar de 20 minutos a una hora para realizar la autólisis. (Todos menos la sal)"
       },
       {
         texto: [
-          "Llevar a la canasta y de ser necesario relizar la costura de la futura base.",
+          "Llevar a la canasta y de ser necesario realizar la costura de la futura base.",
           "Espolvorear con harina. Tapar con una bolsa y dejar leudar.",
-          "Se puede leudar a temperatura ambiente (mas rapido) o en la nevera (3 a 4 veces mas lento).",
-          "Se puede tambien leudar casi completamente a temperatura ambiente y luego las ultimas horas en la nevera."
+          "Se puede leudar a temperatura ambiente (más rápido) o en la nevera (3 a 4 veces más lento).",
+          "Se puede también leudar casi completamente a temperatura ambiente y luego las últimas horas en la nevera."
         ]
       }
     ],
@@ -46,9 +49,10 @@ const recetasData: Receta[] = [
   },
   {
     id: 2,
+    slug: "focaccia-tradicional",
     nombre: "FOCACCIA TRADICIONAL",
     tiempo: "4-6 horas",
-    dificultad: "Fácil",
+    dificultad: "Principiante",
     imagenPortada: "/image/foccacia.jpeg",
     ingredientes: [
       {cantidad: "500 gramos", item: "harina"},
@@ -58,18 +62,18 @@ const recetasData: Receta[] = [
     ],
     pasos: [
       {
-        texto: "Unir el agua, la harina y la masa madre. Reposar por 30/40 minutos en verano y 1hs y 15 minutos en invierno."
+        texto: "Unir el agua, la harina y la masa madre. Reposar por 30/40 minutos en verano y 1 hora y 15 minutos en invierno."
       },
       {
         texto: "Agregar la sal diluida en un poco del agua que reservamos. Comenzar con los plegados, haremos 5 en total."
       },
       {
-        texto: "Plegar la masa cada 20 minutos y en los ultimos dos plegados agregar el aceite en dos partes para que la masa lo tome de a poco."
+        texto: "Plegar la masa cada 20 minutos y en los últimos dos plegados agregar el aceite en dos partes para que la masa lo tome de a poco."
       },
       {
         texto: [
           "Fermentar en el Bowl hasta que duplique su tamaño.",
-          "Pasar a la mesada y dividir las focaccias intentando no desgacificar, sobre la superficie agregar mas aceite y dejar fermentar hasta que vuelvan a duplicar."
+          "Pasar a la mesada y dividir las focaccias intentando no desgasificar, sobre la superficie agregar más aceite y dejar fermentar hasta que vuelvan a duplicar."
         ]
       }
     ],
@@ -78,28 +82,29 @@ const recetasData: Receta[] = [
   },
   {
     id: 3,
+    slug: "hot-cakes",
     nombre: "HOT CAKES",
     tiempo: "30 minutos",
-    dificultad: "Fácil",
+    dificultad: "Principiante",
     imagenPortada: "/image/hotCakes.jpeg",
     ingredientes: [
       {cantidad: "100 gramos", item: "masa madre"},
       {cantidad: "1 pizca", item: "sal"},
       {cantidad: "1 pizca", item: "pimienta"},
-      {cantidad: "50 gramos", item: "queso rayado"},
+      {cantidad: "50 gramos", item: "queso rallado"},
       {cantidad: "1 cucharadita", item: "bicarbonato"}
     ],
     pasos: [
       {
-        texto: "En una sarten engrasada con una grasa termoestable de buena calidad como ghee, grasa de cerdo o vaca, aceite de oliva o de coco"
+        texto: "En una sartén engrasada con una grasa termoestable de buena calidad como ghee, grasa de cerdo o vaca, aceite de oliva o de coco"
       },
       {
-        texto: "En un cuenco unir la masa madre, una pizca de sal y pimienta, nuestro queso de rayar y cuando ya este todo listo para cocinar, nuestro bicarbonato."
+        texto: "En un cuenco unir la masa madre, una pizca de sal y pimienta, nuestro queso rallado y cuando ya esté todo listo para cocinar, nuestro bicarbonato."
       },
       {
         texto: [
-          "Revolver e inmediatamente volcar sobre la sarten, cocinar vuelta y vuelta.",
-          "Se puede cambiar el queso por variantes dulces como miel y canela, coco y arandanos, frutas frescas y congeladas, cacao amargo, etc."
+          "Revolver e inmediatamente volcar sobre la sartén, cocinar vuelta y vuelta.",
+          "Se puede cambiar el queso por variantes dulces como miel y canela, coco y arándanos, frutas frescas y congeladas, cacao amargo, etc."
         ]
       }
     ],
@@ -108,6 +113,7 @@ const recetasData: Receta[] = [
   },
   {
     id: 4,
+    slug: "molde-de-centeno-queso-y-miel",
     nombre: "MOLDE DE CENTENO, QUESO Y MIEL",
     tiempo: "8-10 horas",
     dificultad: "Intermedio",
@@ -125,19 +131,19 @@ const recetasData: Receta[] = [
         texto: "Unir el agua, la harina y la masa madre, realizar una autolisis como siempre."
       },
       {
-        texto: "Agregar la sal diluida en un poco del agua de la receta y lurgo incorporarla con plegados."
+        texto: "Agregar la sal diluida en un poco del agua de la receta y luego incorporarla con plegados."
       },
       {
         texto: [
-          "Hace 4 a 6 plegados separados por un reposo de 30 minutos.",
-          "Fermentar la masa en el bowl en bloque por 6 hs en invierno y 4hs en verano o hasta que crezca por lo menos un 30% y se veagasificada."
+          "Haz 4 a 6 plegados separados por un reposo de 30 minutos.",
+          "Fermentar la masa en el bowl en bloque por 6 hs en invierno y 4 hs en verano o hasta que crezca por lo menos un 30% y se vea gasificada."
         ]
       },
       {
-        texto: "Llevar a mesada y armar los moles sin desgacificar, enrollando dos veces en sentido de cruz como se explica en el curso para crear una buena tension"
+        texto: "Llevar a la mesada y armar los moldes sin desgasificar, enrollando dos veces en sentido de cruz como se explica en el curso para crear una buena tensión"
       },
       {
-        texto: "Leudar a temperatura ambiente o en frio heladera hasta que crezca y llevar al horno maximo (230 a 250 grados) por 40 minutos."
+        texto: "Leudar a temperatura ambiente o en frío en la nevera hasta que crezca y llevar al horno máximo (230 a 250 grados) por 40 minutos."
       }
     ],
     imagen: "/image/centeno.jpeg",
@@ -145,6 +151,7 @@ const recetasData: Receta[] = [
   },
   {
     id: 5,
+    slug: "masa-brioche-dulce",
     nombre: "MASA BRIOCHE DULCE",
     tiempo: "6-8 horas",
     dificultad: "Avanzado",
@@ -162,17 +169,17 @@ const recetasData: Receta[] = [
     pasos: [
       {
         texto: [
-          "Unir todos los ingredientes con excepcion a la manteca. Amasar por 2 minutos para que se incorporen completamente.",
+          "Unir todos los ingredientes con excepción de la manteca. Amasar por 2 minutos para que se incorporen completamente.",
           "Reposar la masa 20 minutos."
         ]
       },
       {
-        texto: "Amasar vigorosamente con maquina (10 minutos en velocidad media) o a mano por 20 minutos. Incorporar en 3 tandas la manteca y amasar hasta que cada poquito sea incorporado a la masa antes de agregar las tandas de manteca siguientes."
+        texto: "Amasar vigorosamente con máquina (10 minutos en velocidad media) o a mano por 20 minutos. Incorporar en 3 tandas la manteca y amasar hasta que cada poquito sea incorporado a la masa antes de agregar las tandas de manteca siguientes."
       },
       {
         texto: [
-          "En maquina el amasado con manteca sera de 10 minutos mas y a mano 20/30 minutos de amasado vigoroso.",
-          "Nos damos cuenta que la masa esta lista cuando logramos generar una malla de gluten con estructura como enseñamos en el curso."
+          "En máquina el amasado con manteca será de 10 minutos más y a mano 20/30 minutos de amasado vigoroso.",
+          "Nos damos cuenta que la masa está lista cuando logramos generar una malla de gluten con estructura como enseñamos en el curso."
         ]
       }
     ],
@@ -182,7 +189,31 @@ const recetasData: Receta[] = [
 ];
 
 const Recetas: React.FC = () => {
-  const [selectedReceta, setSelectedReceta] = useState<Receta | null>(null);
+  const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
+  const selectedReceta = slug
+    ? recetasData.find((r) => r.slug === slug) ?? null
+    : null;
+
+  const [copiado, setCopiado] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = selectedReceta
+      ? `${selectedReceta.nombre} | Masa Madre`
+      : 'Recetas | Masa Madre';
+  }, [slug, selectedReceta]);
+
+  const compartirReceta = async () => {
+    const url = window.location.href;
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopiado(true);
+      setTimeout(() => setCopiado(false), 2000);
+    } catch {
+      window.prompt('Copia el link de la receta:', url);
+    }
+  };
 
   return (
     <div className="recetas">
@@ -194,38 +225,56 @@ const Recetas: React.FC = () => {
               <h1 className="recetas-main-title">RECETAS</h1>
               <h2 className="recetas-subtitle">TRADICIONALES</h2>
               
-              <div className="recetas-grid">
-                {recetasData.map((receta) => (
-                  <div key={receta.id} className="receta-card" onClick={() => setSelectedReceta(receta)}>
-                    <div className="card-image-container">
-                      <img src={receta.imagenPortada} alt={receta.nombre} className="card-image" />
-                    </div>
-                    <div className="card-content">
-                      <h3 className="card-title">{receta.nombre}</h3>
-                      <div className="card-meta">
-                        <span className="card-tiempo">⏱️ {receta.tiempo}</span>
-                        <span className="card-dificultad">👨‍🍳 {receta.dificultad}</span>
-                      </div>
-                      <button className="card-button">Ver Receta</button>
+              {['Principiante', 'Intermedio', 'Avanzado'].map((nivel) => {
+                const recetasNivel = recetasData.filter((r) => r.dificultad === nivel);
+                if (recetasNivel.length === 0) return null;
+                return (
+                  <div key={nivel} className="dificultad-seccion">
+                    <h3 className="dificultad-titulo">{nivel}</h3>
+                    <div className="recetas-grid">
+                      {recetasNivel.map((receta) => (
+                        <div key={receta.id} className="receta-card" onClick={() => navigate(`/recetas/${receta.slug}`)}>
+                          <div className="card-image-container">
+                            <img src={receta.imagenPortada} alt={receta.nombre} className="card-image" />
+                          </div>
+                          <div className="card-content">
+                            <h3 className="card-title">{receta.nombre}</h3>
+                            <div className="card-meta">
+                              <span className="card-tiempo">⏱️ {receta.tiempo}</span>
+                              <span className="card-dificultad">👨‍🍳 {receta.dificultad}</span>
+                            </div>
+                            <button className="card-button">Ver Receta</button>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </div>
         ) : (
           <div className="receta-detalle-container">
             <div className="container">
-              <button className="back-button" onClick={() => setSelectedReceta(null)}>
+              <button className="back-button" onClick={() => navigate('/recetas')}>
                 ← Volver a las recetas
               </button>
               
+              {!selectedReceta ? (
+                <div className="receta-no-encontrada">
+                  <h2>Receta no encontrada</h2>
+                  <p>La receta que buscas no existe o fue movida.</p>
+                </div>
+              ) : (
               <div className="receta-detalle">
                 <div className="receta-header">
                   <h1>{selectedReceta.nombre}</h1>
                   <div className="receta-meta">
                     <span>⏱️ {selectedReceta.tiempo}</span>
                     <span>👨‍🍳 {selectedReceta.dificultad}</span>
+                    <button className="share-button" onClick={compartirReceta}>
+                      {copiado ? '✓ Link copiado' : '🔗 Compartir'}
+                    </button>
                   </div>
                 </div>
 
@@ -278,6 +327,7 @@ const Recetas: React.FC = () => {
                   </div>
                 </div>
               </div>
+              )}
             </div>
           </div>
         )}
