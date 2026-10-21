@@ -131,23 +131,25 @@
 }
 
 .title-masa {
-  font-size: 180px;
+  font-size: clamp(56px, 13vw, 180px);
   font-weight: 900;
   color: #F5A623;
   line-height: 0.85;
   letter-spacing: -5px;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
   font-style: italic;
+  max-width: 100%;
 }
 
 .title-madre {
-  font-size: 180px;
+  font-size: clamp(56px, 13vw, 180px);
   font-weight: 900;
   color: white;
   line-height: 0.85;
   letter-spacing: -5px;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
   font-style: italic;
+  max-width: 100%;
 }
 
 .subtitle {
@@ -158,6 +160,8 @@
   padding: 12px 40px;
   border-radius: 30px;
   display: inline-block;
+  max-width: 90vw;
+  box-sizing: border-box;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   font-style: italic;
 }
@@ -189,7 +193,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .header {
     height: auto;
     min-height: 100vh;
@@ -218,7 +222,7 @@
 
   .title-masa,
   .title-madre {
-    font-size: 100px;
+    font-size: clamp(56px, 12vw, 100px);
   }
 
   .year {

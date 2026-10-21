@@ -39,25 +39,21 @@
 
 .navbar-logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
-  padding: 5px 0;
+  padding: 12px 0 0;
 }
 
 .navbar-logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
-  padding: 0;
+  padding: 8px 0 0;
   margin: 0;
-  transform: scale(2.2); /* Aumentado de 1.8 a 2.2 */
-  transform-origin: left center;
-  margin-top: 8px; /* Ajuste para centrado vertical */
-  margin-left: 25px; /* Más margen a la izquierda */
 }
 
 .navbar-logo-img {
-  height: 90px; /* Aumentado de 80px a 90px */
+  height: 140px;
   width: auto;
   max-height: 100%;
   object-fit: contain;
@@ -142,6 +138,10 @@
   
   .navbar-container {
     padding: 0 20px;
+  }
+
+  .navbar-logo-img {
+    height: 88px;
   }
 
   .logo {
