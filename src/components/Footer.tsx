@@ -17,7 +17,7 @@ function Footer() {
 
         <div className="footer-info">
           <p>Soacha - Cundinamarca</p>
-          <p>© 2025 · Proyecto SENA</p>
+          <p>© 2026 · Proyecto SENA</p>
         </div>
       </div>
     </footer>
