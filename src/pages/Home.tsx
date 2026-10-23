@@ -1,7 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, lazy, Suspense } from 'react';
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 import './Home.css';
+
+const MasaMadre3D = lazy(() => import('../components/MasaMadre3D'));
 
 // Importar videos
 const videoMasa = '/videos/comohacerMasa.mp4';
@@ -150,6 +152,20 @@ const Home: React.FC = () => {
     <div className="home">
       <Navbar />
       <Header />
+
+      {/* Sección 3D interactiva */}
+      <section className="masa-3d-section">
+        <div className="masa-3d-content">
+          <h2 className="masa-3d-title">MIRA CÓMO CRECE</h2>
+          <p className="masa-3d-subtitle">Observa la fermentación en vivo — mueve el mouse para explorarla en 3D ✨</p>
+        </div>
+        <div className="masa-3d-canvas">
+          <Suspense fallback={<div className="masa-3d-loading">Cargando...</div>}>
+            <MasaMadre3D />
+          </Suspense>
+        </div>
+      </section>
+
       {/* Aquí se pueden agregar más secciones de la página home */}
       <section className="home-content">
         <div className="container">
