@@ -93,7 +93,8 @@ function JarGroup() {
     // Ciclo de fermentación: la masa sube desde el fondo hasta llenar el frasco
     const t = state.clock.elapsedTime;
     const p = 0.5 - 0.5 * Math.cos(t * 0.35); // 0→1→0, suave (por tiempo, no por fps)
-    const altura = 0.35 + p * 1.3;           // altura total del cuerpo de masa
+    const altura = 0.35 + p * 1.0
+    ;          // tope calculado para no atravesar la tapa
     if (cuerpoRef.current) {
       cuerpoRef.current.scale.y = altura;
       cuerpoRef.current.position.y = FONDO_FRASCO + altura / 2; // base siempre abajo
@@ -118,13 +119,19 @@ function JarGroup() {
       <mesh position={[0, 0, 0]}>
         <cylinderGeometry args={[1, 0.92, 2.2, 48]} />
         <MeshTransmissionMaterial
-          samples={6}
-          resolution={512}
+          samples={8}
+          resolution={768}
           transmission={1}
-          roughness={0.06}
-          thickness={0.15}
-          ior={1.4}
-          chromaticAberration={0.02}
+          roughness={0.02}
+          thickness={0.08}
+          ior={1.45}
+          chromaticAberration={0.04}
+          anisotropicBlur={0.3}
+          clearcoat={1}
+          clearcoatRoughness={0.05}
+          backside
+          backsideThickness={0.06}
+          background={new THREE.Color('#f0e4cf')}
         />
       </mesh>
 

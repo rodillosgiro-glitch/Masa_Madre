@@ -21,7 +21,7 @@
 .calculadora-header h2 {
   font-family: 'Arial Black', sans-serif;
   font-size: 1.6rem;
-  color: #8B4513;
+  color: #00304D;
   margin: 0 0 0.3rem;
 }
 
@@ -41,7 +41,7 @@
   display: block;
   font-family: 'Arial', sans-serif;
   font-weight: 700;
-  color: #8B4513;
+  color: #00304D;
   margin-bottom: 0.5rem;
 }
 
@@ -107,7 +107,7 @@
 .temperatura-input span {
   font-family: 'Arial', sans-serif;
   font-weight: 700;
-  color: #8B4513;
+  color: #00304D;
   font-size: 1.1rem;
 }
 
@@ -143,7 +143,7 @@
 }
 
 .sal-info strong {
-  color: #8B4513;
+  color: #00304D;
 }
 
 .sal-info p {
@@ -154,7 +154,7 @@
 
 /* Tarjeta de resultados */
 .resultado-card {
-  background: #8B4513;
+  background: #00304D;
   color: white;
   align-self: start;
   position: sticky;

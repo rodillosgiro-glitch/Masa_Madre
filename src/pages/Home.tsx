@@ -153,19 +153,6 @@ const Home: React.FC = () => {
       <Navbar />
       <Header />
 
-      {/* Sección 3D interactiva */}
-      <section className="masa-3d-section">
-        <div className="masa-3d-content">
-          <h2 className="masa-3d-title">MIRA CÓMO CRECE</h2>
-          <p className="masa-3d-subtitle">Observa la fermentación en vivo — mueve el mouse para explorarla en 3D ✨</p>
-        </div>
-        <div className="masa-3d-canvas">
-          <Suspense fallback={<div className="masa-3d-loading">Cargando...</div>}>
-            <MasaMadre3D />
-          </Suspense>
-        </div>
-      </section>
-
       {/* Aquí se pueden agregar más secciones de la página home */}
       <section className="home-content">
         <div className="container">
@@ -177,6 +164,18 @@ const Home: React.FC = () => {
                   <h2 className="section-title-line2">MASA MADRE?</h2>
                 </div>
               </div>
+
+              {/* Frasco 3D interactivo: fermentación en vivo */}
+              <section className="masa-3d-section">
+                <div className="masa-3d-content">
+                  <p className="masa-3d-subtitle">Observa la fermentación en vivo </p>
+                </div>
+                <div className="masa-3d-canvas">
+                  <Suspense fallback={<div className="masa-3d-loading">Cargando...</div>}>
+                    <MasaMadre3D />
+                  </Suspense>
+                </div>
+              </section>
               <p className="masa-madre-description">
                 La masa madre es un fermento compuesto por harina y agua que no contiene ningún tipo de 
                 levadura añadida sino que es la propia harina, en la que hay contenidas un sinfín de levaduras 
