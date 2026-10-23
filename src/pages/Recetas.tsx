@@ -185,8 +185,413 @@ const recetasData: Receta[] = [
     ],
     imagen: "/image/briocheDulce.jpeg",
     imagenAttribution: "https://www.bonviveur.es/recetas/brioche-dulce"
+  },
+  {
+    id: 6,
+    slug: "pan-de-papa-criolla",
+    nombre: "PAN DE PAPA CRIOLLA",
+    tiempo: "12 horas",
+    dificultad: "Intermedio",
+    imagenPortada: "/image/masaMadre.jpeg",
+    ingredientes: [
+      {cantidad:"850 gramos", item:"Harina de trigo"},
+      {cantidad:"500 ml", item:"Agua"},
+      {cantidad:"300 gramos", item:"Masa madre"},
+      {cantidad:"150 gramos", item:"Puré de papa criolla"},
+      {cantidad:"20 gramos", item:"Sal"},
+      {cantidad:"20 ml", item:"Aceite de oliva"},
+      {cantidad:"30 gramos", item:"Cúrcuma"}
+    ],
+    pasos: [
+      {
+        texto:"Balancear la fórmula."
+      },
+      {
+        texto: [
+          "1. Pesar y medir todos los ingredientes.",
+          "2. Hornear la papa criolla con sal, pimienta y aceite de oliva y hacer puré.",
+          "3. Mezclar la harina, agua, puré, cúrcuma, aceite de oliva y masa madre y se acondiciona.",
+          "4. Dejar en reposo por 2 horas realizando dobleces cada 30 minutos.",
+          "5. Fermentar en bloque a temperatura ambiente de 18 °C a 25 °C, 6 horas aprox. hasta duplicar su volumen.",
+          "6. Dividir la masa de acuerdo al peso deseado.",
+          "7. Moldear o formar cada pan.",
+          "8. Fermentar en frío 12 horas.",
+          "9. Con un palo de pincho impregnado de cacao hacer huecos, para simular los ojos de la papa criolla.",
+          "10. Temperatura de horno de acuerdo al tamaño: piezas grandes, menor temperatura y mayor tiempo (170 °C por 25 minutos aprox.); piezas pequeñas, mayor temperatura y menor tiempo (200 °C por 15 minutos aprox.).",
+          "11. Enfriamiento durante 4 horas.",
+          "12. Empaque y comercialización.",
+          "Nota: La masa madre debe haberse refrescado con 4 horas de anterioridad."
+        ]
+      }
+    ],
+    imagen: "/image/masaMadre.jpeg"
+  },  
+  {
+    id: 7,
+    slug: "pan-de-banano-y-cacao",
+    nombre: "PAN DE BANANO Y CACAO",
+    tiempo: "6 horas",
+    dificultad: "Principiante",
+    imagenPortada: "/image/masaMadre.jpeg",
+    ingredientes: [
+      {cantidad: "950 gramos", item: "Harina de trigo"},
+      {cantidad: "400 gramos", item: "Masa madre"},
+      {cantidad: "50 gramos", item: "Cacao"},
+      {cantidad: "300 gramos", item: "Chocolate"},
+      {cantidad: "300 gramos", item: "Banano"},
+      {cantidad: "300 ml", item: "Agua"},
+      {cantidad: "10 gramos", item: "Sal"}
+      
+    ],
+    pasos: [
+      {texto: "Balancear la fórmula."},
+      {texto: [
+        "1. Pesar y medir todos los ingredientes.",
+        "2. Elaborar puré de banano.",
+        "3. Mezclar harina, cacao, sal y adicionar agua.",
+        "4. Incorporar masa madre y agregar puré.",
+        "5. Acondicionar la masa (dar punto).",
+        "6. Al final del amasado agregar chocolate troceado o en chips.",
+        "7. Reposo de la masa por 2 horas plegando cada 30 minutos.",
+        "8. Dividir la masa de acuerdo al peso deseado.",
+        "9. Plegar cada pieza de 2 a 3 veces a fin de generar fuerza.",
+        "10. Fermentación en frío de 10 a 14 horas.",
+        "11. Moldear o formar cada pan.",
+        "12. Colocar en lata engrasada o enharinada.",
+        "13. Fermentación final de 1 a 2 horas a una temperatura de 30 °C y una humedad relativa de 60%.",
+        "14. Espolvorear cacao con tamiz.",
+        "15. Decorar, hacer cortes con cuchilla.",
+        "16. Temperatura de horno de acuerdo al tamaño: piezas grandes, menor temperatura y mayor tiempo (170 °C por 25 minutos aprox.); piezas pequeñas, mayor temperatura y menor tiempo (200 °C por 15 minutos aprox.).",
+        "17. Enfriamiento durante 4 horas.",
+        "18. Empaque y comercialización.",
+        "Nota: La masa madre debe haberse refrescado con 4 horas de anterioridad."
+      ]}
+    ],
+    imagen: "/image/masaMadre.jpeg"
+  },
+ {
+  id: 8,
+  slug: "pan-de-ahuyama",
+  nombre: "PAN DE AHUYAMA",
+  tiempo: "6 horas",
+  dificultad: "Avanzado",
+  imagenPortada: "/image/masaMadre.jpeg",
+  ingredientes: [
+    {cantidad:"1000 gramos", item: "Harina de trigo"},
+    {cantidad:"400 gramos", item: "Ahuyama"},
+    {cantidad:"400 gramos", item: "Masa madre"},
+    {cantidad:"400 ml", item:"Agua"},
+    {cantidad:"22 gramos", item:"Sal"},
+    {cantidad:"100 gramos", item:"Aceite de oliva"},
+    {cantidad:"150 gramos", item:"Semillas de calabaza"},
+    {cantidad:"5 gramos", item:"Cúrcuma"}
+
+  ],
+  pasos: [
+    {texto: "Balancear la fórmula."},
+    {texto: [
+      "1. Pesar y medir todos los ingredientes.",
+      "2. Elaborar puré de ahuyama.",
+      "3. Mezclar harina, masa madre, sal y adicionar agua.",
+      "4. Cocinar ahuyama en trozos con sal y aceite de oliva a 180 °C por 30 minutos.",
+      "5. Retirar la cáscara y hacer puré.",
+      "6. Mezclar la harina de trigo, puré de ahuyama, cúrcuma, aceite de oliva, agua, sal y masa madre.",
+      "7. Al final de la etapa anterior agregar las semillas de calabaza.",
+      "8. Acondicionar (dar punto).",
+      "9. Reposo de 2 horas dando pliegues cada 30 minutos.",
+      "10. Dividir la masa de acuerdo al peso deseado.",
+      "11. Plegar cada pieza de 2 a 3 veces a fin de generar fuerza.",
+      "12. Fermentación en frío de 12 a 18 horas.",
+      "13. Moldear o formar cada pan.",
+      "14. Colocar en lata engrasada o enharinada.",
+      "15. Fermentación final de 1 a 2 horas a una temperatura de 30 °C y una humedad relativa de 60%.",
+      "16. Decorar amarrando la masa con 3 pitas cruzadas y hacer cortes con cuchilla.",
+      "17. Hornear a temperatura de acuerdo al tamaño.",
+      "18. Enfriamiento durante 4 horas.",
+      "19. Empaque y comercialización.",
+      "Nota: La masa madre debe haberse refrescado con 4 horas de anterioridad."
+    ]}
+  ],
+  imagen: "/image/masaMadre.jpeg"
+ },
+  {
+    id: 9,
+    slug: "pan-de-naranja",
+    nombre: "PAN DE NARANJA",
+    tiempo: "6 horas",
+    dificultad: "Avanzado",
+    imagenPortada: "/image/masaMadre.jpeg",
+    ingredientes: [
+      {cantidad:"1000 gramos", item: "Harina de trigo"},
+      {cantidad:"300 gramos", item: "Zumo de naranja"},
+      {cantidad:"400 gramos", item: "Masa madre"},
+      {cantidad:"300 ml", item:"Agua"},
+      {cantidad:"10 gramos", item:"Sal"},
+      {cantidad:"200 gramos", item:"Miel"},
+      {cantidad:"5 gramos", item:"Ralladura de naranja"},
+      {cantidad:"200 gramos", item:"Naranja confitada"}
+
+    ],
+    pasos: [
+      {texto: "Balancear la fórmula y pensar y medir todos los ingredientes."},
+      {texto: [
+        "1. Hervir las cáscaras 8 veces cambiando el agua para eliminar el amargor.",
+        "2. Confitarlas en almíbar (70 % agua, 30 % azúcar) durante 3 días consecutivos. Guardar en recipiente hermético (se conserva hasta 1 año).",
+        "3. Mezclar la harina, agua, zumo de naranja, miel, ralladura de naranja, sal y masa madre.",
+        "4. Acondicionar (dar punto).",
+        "5. Incorporar la cáscara de naranja confitada suavemente.",
+        "6. Reposo de 2 horas dando pliegues cada 30 minutos.",
+        "7. Dividir la masa de acuerdo al peso deseado.",
+        "8. Plegar cada pieza de 2 a 3 veces a fin de generar fuerza.",
+        "9. Fermentación de 6 horas a temperatura ambiente o hasta duplicar su volumen.",
+        "10. Fermentación en frío de 12 a 18 horas.",
+        "11. Moldear o formar cada pan y colocar en lata engrasada o enharinada.",
+        "12. Fermentación final de 1 a 2 horas, a una temperatura de 30 °C y una humedad relativa de 60%.",
+        "13. Espolvorear harina tamizada.",
+        "14. Hornear a temperatura de acuerdo al tamaño.",
+        "15. Enfriamiento durante 4 horas.",
+        "16. Empaque y comercialización.",
+        "Nota: La masa madre debe haberse refrescado con 4 horas de anterioridad."
+      ]}
+    ],
+    imagen: "/image/masaMadre.jpeg"
+  },
+  {
+    id: 10,
+    slug: "pan-de-santarrosano",
+    nombre: "PAN DE SANTARROSANO",
+    tiempo: "6 horas",
+    dificultad: "Avanzado",
+    imagenPortada: "/image/masaMadre.jpeg",
+    ingredientes: [
+      {cantidad:"1000 gramos", item: "Harina de trigo"},
+      {cantidad:"200 gramos", item: "Chorizo santarrosano"},
+      {cantidad:"400 gramos", item: "Masa madre"},
+      {cantidad:"650 ml", item:"Agua"},
+      {cantidad:"20 gramos", item:"Sal"},
+      {cantidad:"150 gramos", item:"Aceite de oliva"},
+      {cantidad:"300 gramos", item:"Queso doble crema"}
+
+    ],
+    pasos: [
+      {texto: "Balancear la fórmula."},
+      {texto: [
+        "1. Pesar y medir todos los ingredientes.",
+        "2. Sofreír el chorizo picado, dejar enfriar.",
+        "3. Mezclar los ingredientes base: harina, agua, aceite de oliva, sal y masa madre.",
+        "4. Acondicionar (dar punto).",
+        "5. Incorporar el chorizo frío y parte del queso rallado.",
+        "6. Reposo de 2 horas dando pliegues cada 30 minutos.",
+        "7. Estirar en bandeja (focaccia).",
+        "8. Fermentación de 6 horas a temperatura ambiente o hasta duplicar su volumen.",
+        "9. Fermentación en frío de 12 a 18 horas.",
+        "10. Decorar con el resto del queso y aceite de oliva.",
+        "11. Temperatura de horno de acuerdo al tamaño: piezas grandes, menor temperatura y mayor tiempo (170 °C por 25 minutos aprox.); piezas pequeñas, mayor temperatura y menor tiempo (200 °C por 15 minutos aprox.).",
+        "12. Enfriamiento durante 4 horas.",
+        "13. Empacar y comercializar.",
+        "Nota: La masa madre debe haberse refrescado con 4 horas de anterioridad."
+      ]}
+    ],
+    imagen: "/image/masaMadre.jpeg"
+  },
+  {
+    id: 11,
+    slug: "pan-de-cafe",
+    nombre: "PAN DE CAFÉ",
+    tiempo: "6 horas",
+    dificultad: "Avanzado",
+    imagenPortada: "/image/masaMadre.jpeg",
+    ingredientes: [
+      {cantidad:"1000 gramos", item: "Harina de trigo"},
+      {cantidad:"50 gramos", item: "Café"},
+      {cantidad:"300 gramos", item: "Masa madre"},
+      {cantidad:"600 ml", item:"Agua"},
+      {cantidad:"10 gramos", item:"Sal"},
+      {cantidad:"180 gramos", item:"Miel"}
+
+    ],
+    pasos: [
+      {texto: "Balancear la fórmula."},
+      {texto: [
+        "1. Pesar y medir todos los ingredientes.",
+        "2. Mezclar los ingredientes base: harina, agua, miel, café liofilizado, sal y masa madre.",
+        "3. Acondicionar (dar punto).",
+        "4. Reposo de 2 horas dando pliegues cada 30 minutos.",
+        "5. Dividir la masa de acuerdo al peso deseado.",
+        "6. Plegar cada pieza de 2 a 3 veces.",
+        "7. Fermentación en frío de 12 a 18 horas.",
+        "8. Moldear o formar cada pan.",
+        "9. Fermentación final de 1 a 2 horas, a una temperatura de 30 °C y una humedad relativa de 60%.",
+        "10. Decorar con cortes, simulando un grano de café.",
+        "11. Temperatura de horno de acuerdo al tamaño: piezas grandes, menor temperatura y mayor tiempo (170 °C por 25 minutos aprox.); piezas pequeñas, mayor temperatura y menor tiempo (200 °C por 15 minutos aprox.).",
+        "12. Enfriamiento durante 4 horas.",
+        "13. Empacar y comercializar.",
+        "Nota: La masa madre debe haberse refrescado con 4 horas de anterioridad."
+      ]}
+    ],
+    imagen: "/image/masaMadre.jpeg"
+  },
+  {
+    id: 12,
+    slug: "pan-de-semillas",
+    nombre: "PAN DE SEMILLAS",
+    tiempo: "6 horas",
+    dificultad: "Avanzado",
+    imagenPortada: "/image/masaMadre.jpeg",
+    ingredientes: [
+      {cantidad:"1000 gramos", item: "Harina de trigo"},
+      {cantidad:"100 gramos", item: "Aceite de oliva"},
+      {cantidad:"400 gramos", item: "Masa madre"},
+      {cantidad:"600 ml", item:"Agua"},
+      {cantidad:"22 gramos", item:"Sal"},
+      {cantidad:"100 gramos", item:"Linaza"},
+      {cantidad:"100 gramos", item:"Ajonjolí tostado"},
+      {cantidad:"100 gramos", item:"Chía"}
+
+    ],
+    pasos: [
+      {texto: "Balancear la fórmula."},
+      {texto: [
+        "1. Pesar y medir todos los ingredientes.",
+        "2. Tostar el ajonjolí e hidratar chía y linaza en agua (en la misma cantidad) mínimo 2 horas antes.",
+        "3. Mezclar los ingredientes base: harina, agua, aceite de oliva, sal y masa madre.",
+        "4. Acondicionar (dar punto).",
+        "5. Incorporar las semillas hidratadas y el ajonjolí tostado.",
+        "6. Reposo de 2 horas dando pliegues cada 30 minutos.",
+        "7. Dividir la masa de acuerdo al peso deseado.",
+        "8. Plegar cada pieza de 2 a 3 veces a fin de generar fuerza.",
+        "9. Fermentación en frío de 12 a 18 horas.",
+        "10. Moldear o formar cada pan.",
+        "11. Colocar en lata engrasada o enharinada.",
+        "12. Fermentación final de 1 a 2 horas, a una temperatura de 30 °C y una humedad relativa de 60%.",
+        "13. Espolvorear con harina y hacer cortes decorativos.",
+        "14. Temperatura de horno de acuerdo al tamaño: piezas grandes, menor temperatura y mayor tiempo (170 °C por 25 minutos aprox.); piezas pequeñas, mayor temperatura y menor tiempo (200 °C por 15 minutos aprox.).",
+        "15. Enfriamiento durante 4 horas.",
+        "16. Empacar y comercializar.",
+        "Nota: La masa madre debe haberse refrescado con 4 horas de anterioridad."
+      ]}
+    ],
+    imagen: "/image/masaMadre.jpeg"
+  },
+  {
+    id: 13,
+    slug: "pan-de-chocolate",
+    nombre: "PAN DE CHOCOLATE",
+    tiempo: "6 horas",
+    dificultad: "Intermedio",
+    imagenPortada: "/image/masaMadre.jpeg",
+    ingredientes: [
+      {cantidad:"900 gramos", item:"Harina de trigo"},
+      {cantidad:"100 gramos", item: "Cacao"},
+      {cantidad:"400 gramos", item:"Masa madre"},
+      {cantidad:"420 gramos", item:"Agua"},
+      {cantidad:"10 gramos", item:"Sal"},
+      {cantidad:"150 gramos", item:"Mantequilla"},
+      {cantidad:"200 gramos", item:"Azúcar"},
+      {cantidad:"100 gramos", item:"Huevo"},
+      {cantidad:"50 gramos", item:"Leche en polvo"},
+      {cantidad:"300 gramos", item:"Chocolate"},
+      {cantidad:"5 gramos", item:"Canela"}
+    ],
+    pasos: [
+      {texto: "Balancear la fórmula, pesar y medir todos los ingredientes."},
+        {texto: [
+          "1. Mezclar harina y cacao; agregar sal, leche en polvo, canela y agua.",
+          "2. Adicionar azúcar, huevo, mantequilla y masa madre.",
+          "3. Acondicionar (dar punto).",
+          "4. Incorporar chocolate semiamargo troceado (si el clima es cálido se recomienda no agregar chocolate troceado ya que se funde).",
+          "5. Reposo de 2 horas dando pliegues cada 30 minutos.",
+          "6. Dividir la masa de acuerdo al peso deseado, y plegar cada pieza de 2 a 3 veces a fin de generar fuerza.",
+          "7. Fermentación en frío de 12 a 18 horas y moldear o formar cada pan.",
+          "8. Colocar en lata engrasada o enharinada.",
+          "9. Fermentación final de 1 a 3 horas aprox.",
+          "10. Espolvorear con harina y hacer cortes decorativos.",
+          "11. Hornear a temperatura de acuerdo al tamaño.",
+          "12. Enfriamiento durante 4 horas.",
+          "13. Empacar y comercializar.",
+          "Nota: La masa madre debe haberse refrescado 4 horas antes."
+        ]}  
+    ],
+    imagen: "/image/masaMadre.jpeg"
+  },
+  {
+    id: 14,
+    slug: "pan-de-avena",
+    nombre: "PAN DE AVENA",
+    tiempo: "4 horas",
+    dificultad: "Principiante",
+    imagenPortada: "/image/masaMadre.jpeg",
+    ingredientes: [
+      {cantidad: "850 gramos", item: "Harina de trigo"},
+      {cantidad: "150 gramos", item: "Avena de hojuelas"},
+      {cantidad: "300 gramos", item: "Masa madre"},
+      {cantidad: "650 ml", item: "Agua"},
+      {cantidad: "20 gramos", item:"Sal"},
+      {cantidad: "50 gramos", item:"Aceite de oliva"},
+      {cantidad: "100 gramos", item:"Miel de abejas"}
+    ],
+    pasos: [
+      {texto: "Balancear la fórmula, pensar y medir todos los ingredientes."},
+      {texto: [
+        "1. Mezclar los ingredientes base: avena en hojuelas, agua, aceite de oliva, miel, sal y masa madre.",
+        "2. Acondicionar (dar punto).",
+        "3. Reposo de 2 horas dando pliegues cada 30 minutos.",
+        "4. Dividir la masa de acuerdo al peso deseado.",
+        "5. Plegar cada pieza de 2 a 3 veces a fin de generar fuerza.",
+        "6. Fermentación en frío de 12 a 18 horas.",
+        "7. Moldear o formar cada pan.",
+        "8. Colocar en lata engrasada o enharinada.",
+        "9. Fermentación final de 1 a 2 horas, a una temperatura de 30 °C y una humedad relativa de 60%.",
+        "10. Espolvorear con harina y hacer cortes decorativos.",
+        "11. Temperatura de horno de acuerdo al tamaño: piezas grandes, menor temperatura y mayor tiempo (170 °C por 25 minutos aprox.); piezas pequeñas, mayor temperatura y menor tiempo (200 °C por 15 minutos aprox.).",
+        "12. Enfriamiento durante 4 horas.",
+        "13. Empacar y comercializar.",
+        "Nota: La masa madre debe haberse refrescado con 4 horas de anterioridad."
+     ]}
+    ],
+    imagen: "/image/masaMadre.jpeg"
+  },
+  {
+    id: 15,
+    slug: "pan-de-remolacha",
+    nombre: "PAN DE REMOLACHA",
+    tiempo: "2 horas",
+    dificultad: "Principiante",
+    imagenPortada: "/image/masaMadre.jpeg",
+    ingredientes: [
+      {cantidad: "800 gramos", item: "Harina de trigo"},
+      {cantidad: "200 gramos", item: "Remolacha"},
+      {cantidad: "400 gramos", item: "Masa madre"},
+      {cantidad: "500 ml", item: "Agua"},
+      {cantidad: "20 gramos", item: "Sal"},
+      {cantidad: "100 gramos", item: "Aceite de oliva"}
+    ],
+    pasos: [
+      {texto: "Balancear la fórmula, pesar y medir todos los ingredientes."},
+      {texto: [
+        "1. Cocer la remolacha, cortar en cubos pequeños y reservar el agua de cocción.",
+        "2. Mezclar los ingredientes base: harina, agua de cocción, aceite de oliva, sal y masa madre.",
+        "3. Acondicionar (dar punto).",
+        "4. Incorporar la remolacha en cubos al final del amasado.",
+        "5. Reposo de 2 horas dando pliegues cada 30 minutos.",
+        "6. Dividir la masa de acuerdo al peso deseado.",
+        "7. Plegar cada pieza de 2 a 3 veces a fin de generar fuerza.",
+        "8. Fermentación en frío de 12 a 18 horas.",
+        "9. Moldear o formar cada pan.",
+        "10. Colocar en lata engrasada o enharinada.",
+        "11. Fermentación final de 1 a 2 horas, a una temperatura de 30 °C y una humedad relativa de 60%.",
+        "12. Espolvorear con harina y colocar una rama de hierbabuena.",
+        "13. Hornear a temperatura de acuerdo al tamaño.",
+        "14. Enfriamiento durante 4 horas.",
+        "15. Empacar y comercializar.",
+        "Nota: La masa madre debe haberse refrescado con 4 horas de anterioridad."
+      ]}
+    ],
+    imagen: "/image/masaMadre.jpeg"
   }
 ];
+
+
 
 const Recetas: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
